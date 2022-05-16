@@ -58,6 +58,12 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## API'S
+
+/most-common-story-words?top=10&last=10
+/most-common-story-words/top-10-last-time?time=10&top=10
+/most-common-story-words/top-10-stories-with-user-with-min-karma?karma=10000&top=10
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).

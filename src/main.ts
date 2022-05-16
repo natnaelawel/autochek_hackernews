@@ -10,7 +10,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.setGlobalPrefix('api');
 
-
   const config = new DocumentBuilder()
     .setTitle('Hackers Api')
     .setDescription('The hackers API description')
@@ -19,7 +18,9 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-  
-  await app.listen(3333);
+
+  const port: number = parseInt(`${process.env.PORT}`) || 3333;
+
+  await app.listen(port);
 }
 bootstrap();

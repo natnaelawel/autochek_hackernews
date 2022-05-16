@@ -17,7 +17,7 @@ async function bootstrap() {
     .addTag('hackers')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('/', app, document);
 
   const port: number = parseInt(`${process.env.PORT}`) || 3333;
 
